@@ -1,0 +1,34 @@
+/* index.css */
+@import "remixicon/fonts/remixicon.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal reset + utility feel if you're not using Tailwind */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    "Helvetica Neue", Arial;
+  background: #f8fafc;
+  color: #111827;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input,
+select,
+textarea {
+  outline: none;
+}

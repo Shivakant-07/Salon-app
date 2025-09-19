@@ -1,0 +1,89 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 6AE5-5EEB
+C:.
+|   .env
+|   frontend_structure.txt
+|   index.html
+|   package-lock.json
+|   package.json
+|   postcss.config.js
+|   tailwind.config.js
+|   vite.config.js
+|                
+\---src
+    |   App.jsx
+    |   index.css
+    |   index.jsx
+    |   main.jsx
+    |   
+    +---assets
+    |       About.png
+    |       BookingCTA.png
+    |       ColorServices.png
+    |       FacialTreatment.png
+    |       HairStyling.png
+    |       HairTransformation.png
+    |       Hero.png
+    |       MakeupArtistry.png
+    |       NailArts.png
+    |       Review1.png
+    |       Review2.png
+    |       Review3.png
+    |       SalonInterior.png
+    |       ServicesImg.png
+    |       SpaTreatment.png
+    |       
+    +---components
+    |       About.jsx
+    |       AdminDashboardModal.jsx
+    |       AuthModal.jsx
+    |       BookinCTA.jsx
+    |       BookingModal.jsx
+    |       Contact.jsx
+    |       Footer.jsx
+    |       Gallery.jsx
+    |       Hero.jsx
+    |       ManageAppointmentsModal.jsx
+    |       ManageServicesModal.jsx
+    |       ManageStaffModal.jsx
+    |       ModalWrapper.jsx
+    |       MyAppointmentsModal.jsx
+    |       Navbar.jsx
+    |       OAuthButtons.jsx
+    |       ProfileModal.jsx
+    |       ProtectedRoute.jsx
+    |       Review.jsx
+    |       ServiceCard.jsx
+    |       
+    +---context
+    |       AuthContext.jsx
+    |       
+    +---pages
+    |   |   Home.jsx
+    |   |   ModalDemo.jsx
+    |   |   Profile.jsx
+    |   |   Reschedule.jsx
+    |   |   Services.jsx
+    |   |   
+    |   +---admin
+    |   |       Dashboard.jsx
+    |   |       ManageAppointments.jsx
+    |   |       ManageServices.jsx
+    |   |       ManageStaff.jsx
+    |   |       Reports.jsx
+    |   |       
+    |   +---auth
+    |   |       Login.jsx
+    |   |       Register.jsx
+    |   |       
+    |   +---customer
+    |   |       Services.jsx
+    |   |       Staff.jsx
+    |   |       
+    |   \---staff
+    |           Schedule.jsx
+    |           StaffDashboardModal.jsx
+    |           
+    \---utils
+            axiosInstance.jsx
+            
