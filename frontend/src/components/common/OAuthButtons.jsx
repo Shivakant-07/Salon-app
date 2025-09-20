@@ -11,7 +11,7 @@ export default function OAuthButtons() {
     const googleAuth = () => {
         // Open backend OAuth route
         window.open(
-            `${import.meta.env.VITE_API_URL || "http://localhost:5000/api"}/oauth/google`,
+            `${import.meta.env.VITE_API_URL || "https://salon-backend-ktdp.onrender.com/api"}/oauth/google`,
             "_self"
         );
     };

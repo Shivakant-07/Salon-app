@@ -7,7 +7,7 @@ export default defineConfig({
         host: true,
         port: 5173,
         proxy: {
-            "/api": "http://localhost:5000",
+            "/api": "https://salon-backend-ktdp.onrender.com",
         },
         allowedHosts: ["8b4b3cf6835c.ngrok-free.app"],
 
