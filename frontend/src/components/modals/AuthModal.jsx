@@ -51,9 +51,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = "login" }) => {
             onClose();
 
             // Redirect based on role
-            if (user.role === "admin") navigate("/admin/dashboard");
-            else if (user.role === "staff") navigate("/staff/dashboard");
-            else navigate("/");
+            navigate("/");
         } catch (err) {
             toast.error(err.response?.data?.message || "Login failed");
         } finally {
