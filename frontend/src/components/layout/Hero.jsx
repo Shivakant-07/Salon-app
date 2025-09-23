@@ -25,7 +25,7 @@ const Hero = () => {
 
     const handleAuthRequired = () => {
         setAuthMode("login");
-        setShowAuth(true);
+        setShowAuth(false);
     };
 
     return (
