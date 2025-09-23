@@ -14,19 +14,19 @@ router.get(
         try {
             console.log("OAuth callback received for user:", req.user?.email);
 
-            // issue JWT and set cookie, then redirect to client
             const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 
             const clientUrl = process.env.CLIENT_URL || "https://salon-frontend-2ih2.onrender.com";
-            console.log("Redirecting to:", `${clientUrl}/?oauth=success`);
 
+            // ✅ Set cookie for cross-domain (frontend different from backend)
             res.cookie("token", token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === "production",
-                sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+                secure: true,        // must be true for HTTPS
+                sameSite: "none",    // allow cross-site requests
                 maxAge: 30 * 24 * 60 * 60 * 1000,
             });
 
+            // ✅ Redirect with query param token (optional, for localStorage)
             res.redirect(`${clientUrl}/?oauth=success`);
         } catch (error) {
             console.error("Error in OAuth callback:", error);
@@ -34,5 +34,6 @@ router.get(
         }
     }
 );
+
 
 export default router;
