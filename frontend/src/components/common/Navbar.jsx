@@ -37,6 +37,7 @@ export default function Navbar() {
             localStorage.removeItem("token");
             delete api.defaults.headers.common["Authorization"];
             setUser(null);
+            toast.success("Successfully logout!");
             nav("/");
         }
     };
