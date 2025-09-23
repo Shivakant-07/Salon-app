@@ -17,7 +17,7 @@ router.get(
             // issue JWT and set cookie, then redirect to client
             const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET, { expiresIn: "30d" });
 
-            const clientUrl = process.env.CLIENT_URL || "http://localhost:5173";
+            const clientUrl = process.env.CLIENT_URL || "https://salon-frontend-2ih2.onrender.com";
             console.log("Redirecting to:", `${clientUrl}/?oauth=success`);
 
             res.cookie("token", token, {
@@ -30,7 +30,7 @@ router.get(
             res.redirect(`${clientUrl}/?oauth=success`);
         } catch (error) {
             console.error("Error in OAuth callback:", error);
-            res.redirect(`${process.env.CLIENT_URL || "http://localhost:5173"}/login?error=oauth_failed`);
+            res.redirect(`${process.env.CLIENT_URL || "https://salon-frontend-2ih2.onrender.com"}/login?error=oauth_failed`);
         }
     }
 );
